@@ -1,0 +1,133 @@
+### UN metadata vocaulary for demo
+### manually created
+
+@prefix ex:     <http://example.org/> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+
+### POPULATION ###
+
+ex:population           a                   rdfs:Class , 
+                                            owl:Class ;
+                        rdfs:label          "Population"@en ;
+                        skos:definition     "Total population and distribution by age and sex estimated to be consistent with the population by age and sex of the related population property"@en .
+
+ex:census               a                   rdf:Property , 
+                                            owl:ObjectProperty ;
+                        rdfs:domain         ex:population ;
+                        rdfs:range          xsd:gYear ;
+                        rdfs:label          "Census"@en ;
+                        skos:definition     "Census years property related to population"@en .
+
+ex:populationOfficialEstimates  a                   rdf:Property , 
+                                                    owl:ObjectProperty ;
+                                rdfs:domain         ex:population ;
+                                rdfs:range          xsd:gYear ;
+                                rdfs:label          "Population Official Estimates"@en ;
+                                skos:definition     "Official estimates through years related to population"@en .
+
+ex:deFactoPopulationAdjustment          a                   rdf:Property , 
+                                                            owl:ObjectProperty ;
+                                        rdfs:domain         ex:population ;
+                                        rdfs:range          xsd:boolean ;
+                                        rdfs:label          "De Facto Population Adjustment"@en ;
+                                        skos:definition     "Whether or not De Facto Population Adjustment has happened"@en .
+
+ex:subsequentTrends     a                   rdf:Property , 
+                                            owl:ObjectProperty ;
+                        rdfs:domain         ex:population ;
+                        rdfs:range          xsd:boolean ;
+                        rdfs:label          "Subsequent Trends"@en ;
+                        skos:definition     "Whether or not estimates of the subsequent trends in fertility, mortality, and international migration have been considered"@en .
+
+
+### FERTILITY ###
+
+ex:fertility            a                   rdfs:Class , 
+                                            owl:Class ;
+                        rdfs:label          "Fertility"@en ;
+                        skos:definition     "Total fertility rate and age pattern of fertility based on related property"@en .
+
+ex:ageMother            a                   rdf:Property , 
+                                            owl:ObjectProperty ;
+                        rdfs:domain         ex:fertility ;
+                        rdfs:range          xsd:gYear ;
+                        rdfs:label          "Age Mother"@en ;
+                        skos:definition     "Registered births classified by age of mother and the underlying female population by age through the year/years of: "@en .
+
+ex:fertilityBirthHistory        a                   rdf:Property , 
+                                                    owl:ObjectProperty ;
+                                rdfs:domain         ex:fertility ;
+                                rdfs:range          xsd:gYear ;
+                                rdfs:label          "Fertility Birth-History"@en ;
+                                skos:definition     "Years of birth-histories fertility data"@en .
+
+
+### CHILD MORTALITY ###
+
+ex:childMortality       a                   rdfs:Class , 
+                                            owl:Class ;
+                        rdfs:label          "Child Mortality"@en ;
+                        skos:definition     "Under-five mortality based on related property"@en .
+
+ex:childMortalityBirthHistory       a                   rdf:Property , 
+                                                        owl:ObjectProperty ;
+                                    rdfs:domain         ex:childMortality ;
+                                    rdfs:range          xsd:gYear ;
+                                    rdfs:label          "Child Mortality Birth-History"@en ;
+                                    skos:definition     "Years of birth-histories child mortality data"@en .
+
+ex:officialEstimateInfantChildMortality     a                   rdf:Property , 
+                                                                owl:ObjectProperty ;
+                                            rdfs:domain         ex:childMortality ;
+                                            rdfs:range          xsd:gYear ;
+                                            rdfs:label          "Official Estimates Infant and Child Mortality"@en ;
+                                            skos:definition     "Years of which official estimates of infant and child mortality have been considered"@en .
+           
+
+### OVERALL MORTALITY ###
+
+ex:overallMortality     a                   rdfs:Class , 
+                                            owl:Class ;
+                        rdfs:label          "Overall Mortality"@en ;
+                        skos:definition     "Life expectancy at birth and age pattern of mortality based on related property"@en .
+
+ex:overallMortalityOfficialEstimates    a                   rdf:Property , 
+                                                                owl:ObjectProperty ;
+                                            rdfs:domain         ex:overallMortality ;
+                                            rdfs:range          xsd:gYear ;
+                                            rdfs:label          "Overall Mortality Official Estimates"@en ;
+                                            skos:definition     "Years of which official estimated of overall mortality have been considered"@en .
+
+ex:adjustedForUnderregistration     a                   rdf:Property , 
+                                                        owl:ObjectProperty ;
+                                    rdfs:domain         ex:overallMortality ;
+                                    rdfs:range          xsd:boolean ;
+                                    rdfs:label          "Adjusted For Underregistration"@en ;
+                                    skos:definition     "Whether or not Underregistration has been adjusted"@en .
+
+ex:adjustedForUnderreporting        a                   rdf:Property , 
+                                                        owl:ObjectProperty ;
+                                    rdfs:domain         ex:overallMortality ;
+                                    rdfs:range          xsd:boolean ;
+                                    rdfs:label          "Adjusted For Underreporting"@en ;
+                                    skos:definition     "Whether or not Underreporting of infant and child deaths has been adjusted"@en .
+
+
+### MIGRATION ###
+
+ex:migration            a                   rdfs:Class , 
+                                            owl:Class ;
+                        rdfs:label          "Migration"@en ;
+                        skos:definition     "International migration based on related property"@en .
+
+ex:estimatesDerivation   a                   rdf:Property , 
+                                            owl:ObjectProperty ;
+                        rdfs:domain         ex:migration ;
+                        rdfs:range          xsd:boolean ;
+                        rdfs:label          "Estimates Derivation"@en ;
+                        skos:definition     "Whether or not Estimates have been derived as the differences between overall population growth and natural increase"@en .
+
