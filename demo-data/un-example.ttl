@@ -1,0 +1,95 @@
+### UN metadata for demo
+### manually created
+
+@prefix ex:     <http://example.org/> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+
+### POPULATION ###
+
+ex:population           a                   rdfs:Class , 
+                                            owl:Class ;
+                        rdfs:label          "Population"@en ;
+                        skos:definition     "Total population and distribution by age and sex estimated to be consistent with the population by age and sex of the related population property"@en .
+
+ex:census               a                   rdf:Property , 
+                                            owl:ObjectProperty ;
+                        rdfs:domain         ex:population ;
+                        rdfs:range          xsd:gYear ;
+                        rdfs:label          "Census"@en ;
+                        skos:definition     "Census years property related to population"@en .
+
+ex:officialEstimates    a                   rdf:Property , 
+                                            owl:ObjectProperty ;
+                        rdfs:domain         ex:population ;
+                        rdfs:range          xsd:gYear ;
+                        rdfs:label          "Official Estimates"@en ;
+                        skos:definition     "Official estimates through years related to population"@en .
+
+ex:deFactoPopulationAdjustment          a                   rdf:Property , 
+                                                            owl:ObjectProperty ;
+                                        rdfs:domain         ex:population ;
+                                        rdfs:range          xsd:boolean ;
+                                        rdfs:label          "Censuses"@en ;
+                                        skos:definition     "Census years related to population"@en .
+
+ex:subsequentTrends     a                   rdf:Property , 
+                                            owl:ObjectProperty ;
+                        rdfs:domain         ex:population ;
+                        rdfs:range          xsd:boolean ;
+                        rdfs:label          "Subsequent Trends"@en ;
+                        skos:definition     "With estimates of the subsequent trends in fertility, mortality, and international migration"@en .
+
+### FERTILITY ###
+
+ex:fertility            a                   rdfs:Class , 
+                                            owl:Class ;
+                        rdfs:label          "Fertility"@en ;
+                        skos:definition     "Total fertility rate and age pattern of fertility based on related property"@en .
+
+ex:ageMother            a                   rdf:Property , 
+                                            owl:ObjectProperty ;
+                        rdfs:domain         ex:fertility ;
+                        rdfs:range          xsd:gYear ;
+                        rdfs:label          "Age Mother"@en ;
+                        skos:definition     "Registered births classified by age of mother and the underlying female population by age through the year/years of: "@en .
+
+ex:birthHistory         a                   rdf:Property , 
+                                            owl:ObjectProperty ;
+                        rdfs:domain         ex:fertility ;
+                        rdfs:range          xsd:gYear ;
+                        rdfs:label          "Birth-History"@en ;
+                        skos:definition     "Years of birth-histories data"@en .
+
+
+### CHILD MORTALITY ###
+
+ex:childMortality       a                   rdfs:Class , 
+                                            owl:Class ;
+                        rdfs:label          "Child Mortality"@en ;
+                        skos:definition     "Under-five mortality based on related property"@en .
+
+
+### OVERALL MORTALITY ###
+
+ex:overallMortality     ex:hasDescription   ex:overallMortalityA ,
+                                            ex:overallMortalityB ,
+                                            ex:overallMortalityC .
+
+
+
+
+### MIGRATION ###
+
+ex:migration            ex:hasDescription   ex:migrationA .
+
+
+
+
+
+
+
+
