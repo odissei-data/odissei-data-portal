@@ -1,6 +1,8 @@
 ### UN metadata vocaulary for demo
 ### manually created
 
+### ELSST thesaurus https://thesauri.cessda.eu/elsst/en/
+
 @prefix ex:     <http://example.org/> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
@@ -10,10 +12,11 @@
 
 ### POPULATION ###
 
-ex:population           a                   rdfs:Class , 
-                                            owl:Class ;
-                        rdfs:label          "Population"@en ;
-                        skos:definition     "Total population and distribution by age and sex estimated to be consistent with the population by age and sex of the related population property"@en .
+<https://elsst.cessda.eu/id/c80d7b6c-78b9-4a0e-ab43-941d89888b02>    # POPULATION term in ELSST
+                        a                   skos:Concept ;
+                        skos:inScheme       <https://elsst.cessda.eu/id/> ;
+                        skos:topConceptOf   <https://elsst.cessda.eu/id/> ;
+                        skos:prefLabel      "POPULATION"@en .
 
 ex:census               a                   rdf:Property , 
                                             owl:ObjectProperty ;

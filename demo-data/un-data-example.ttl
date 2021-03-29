@@ -1,0 +1,31 @@
+### UN metadata for demo
+### manually created
+
+### UN metadata found here:https://population.un.org/wpp/Download/Files/4_Metadata/WPP2019_Data-Sources.pdf
+### country URI http://publications.europa.eu/resource/authority/country
+
+
+<http://publications.europa.eu/resource/authority/country/ARM>      ex:census       1959,
+                                                                                    1970,
+                                                                                    1979,
+                                                                                    1989,
+                                                                                    2001,
+                                                                                    2011 ;
+                                                                    ex:populationOfficialEstimates      2017 ;
+                                                                    ex:deFactoPopulationAdjustment      True ;
+                                                                    ex:subsequentTrends     True ;
+                                                                    ex:ageMother        2015 ;
+                                                                    ex:fertilityBirthHistory        2000,
+                                                                                                    2005,
+                                                                                                    2010,
+                                                                                                    2015 ;
+                                                                    ex:childMortalityBirthHistory       2000,
+                                                                                                        2005,
+                                                                                                        2010,
+                                                                                                        2015 ;
+                                                                    ex:officialEstimateInfantChildMortality     2017 ;
+                                                                    ex:overallMortalityOfficialEstimates        2016;
+                                                                    ex:adjustedForUnderregistration     True ;
+                                                                    ex:adjustedForUnderreporting        True ;
+                                                                    ex:estimatesDerivation              True .
+
