@@ -1,0 +1,64 @@
+prefixes:
+  dans: https://example.org/dansOntology/
+  doi: http://doi.org/
+  dct: http://purl.org/dc/terms/
+  disco: http://rdf-vocabulary.ddialliance.org/discovery#
+  opl: http://www.w3id.org/odissei/ns/terms_of_use_representation/
+  odrl: http://www.w3.org/ns/odrl/2/
+  idlab-fn: http://example.com/idlab/function/
+  grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
+
+mappings:
+  test:
+    sources:
+      - ['dans.xml~xpath', 'OAI-PMH/ListRecords/record/metadata/resource']
+    s: 
+        function: grel:array_join
+        parameters:
+            - [grel:p_array_a, [doi:, $(identifier)]]
+    po:
+      - [a, disco:LogicalDataSet]
+      - [dct:creator, $(creators/creator/creatorName),xsd:string]
+      - [dct:title, $(titles/title), xsd:string]
+      - [dct:publisher, $(publisher), xsd:string]
+      - [dct:subject, $(subjects/subject),xsd:string]
+      - [dct:contributor, $(contributors/contributor/contributorName), xsd:string]
+      - [dct:dateSubmitted, "$(dates/date[@dateType='Submitted'])", xsd:date]
+      - [dct:created, "$(dates/date[@dateType='Created'])", xsd:date]
+      - [dct:available, "$(dates/date[@dateType='Available'])", xsd:date]
+      - [dct:language, $(language), xsd:language]
+      - [dct:type, $(resourceType), xsd:string]
+      - [dans:easyAltId, $(alternateIdentifiers/alternateIdentifier), xsd:string]
+      - [dct:format, $(formats/format), xsd:string]
+      - predicates: opl:hasAccess
+        objects: 
+            - function: idlab-fn:decide
+              parameters:
+                - [idlab-fn:str, "$(rightsList/rights[1])"]
+                - [idlab-fn:expectedStr, "info:eu-repo/semantics/restrictedAccess"]
+                - [idlab-fn:result, opl:Restricted] 
+              type: iri
+            - function: idlab-fn:decide
+              parameters:
+                - [idlab-fn:str, "$(rightsList/rights[1])"]
+                - [idlab-fn:expectedStr, "info:eu-repo/semantics/openAccess"]
+                - [idlab-fn:result, opl:Accessible] 
+              type: iri
+      - predicates: odrl:hasPolicy
+        objects:
+            - function: idlab-fn:decide
+              parameters:
+                - [idlab-fn:str, "$(rightsList/rights[2])"]
+                - [idlab-fn:expectedStr, "DANS License"]
+                - [idlab-fn:result, "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf"]
+              type: iri
+            - function: idlab-fn:decide
+              parameters:
+                - [idlab-fn:str, "$(rightsList/rights[2])"]
+                - [idlab-fn:expectedStr, "License: http://creativecommons.org/publicdomain/zero/1.0"]
+                - [idlab-fn:result, "http://creativecommons.org/publicdomain/zero/1.0"]
+              type: iri 
+      - [dct:description, $(descriptions/description), xsd:string]
+      - [dct:spatial, $(geoLocations/geoLocation/geoLocationPlace), xsd:string]
+               
+          
