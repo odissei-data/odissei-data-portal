@@ -1,0 +1,22 @@
+@prefix disco: <http://rdf-vocabulary.ddialliance.org/discovery#>.
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix opl: <http://www.w3id.org/odissei/ns/terms_of_use_representation/>.
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+<https://population.un.org/wpp/Download/Files/4_Metadata/WPP2019_F02_METADATA.XLSX> a disco:LogicalDataSet;
+    dct:creator "United Nations - Department of Economic and Social Affairs"^^xsd:string;
+    dct:title "World Population Prospects 2019"^^xsd:string;
+    dct:publisher "United Nations - Department of Economic and Social Affairs"^^xsd:string;
+    dct:subject "Population data"^^xsd:string, "Fertility data"^^xsd:string, "Mortality data"^^xsd:string, "CSV format"^^xsd:string;
+    dct:dateSubmitted "2019-08-28"^^xsd:date;
+    dct:language "en"^^xsd:language;
+    dct:type "Dataset"^^xsd:string;
+    dct:format "XMLS"^^xsd:string;
+    opl:hasAccess opl:Accessible;
+    odrl:hasPolicy <http://creativecommons.org/licenses/by/4.0>;
+    dct:description "Excel files with estimates and standard projection variants (see Definition of projection variants for further details). For probabilistic results, select Probabilistic Projections above. For advanced users who need to use these data in a database form or statistical software, we recommend to use the CSV format for bulk download.             "^^xsd:string;
+    dct:spatial <http://publications.europa.eu/resource/authority/country/IDN>.
+
+
+
+
+
