@@ -2,30 +2,199 @@
 ### manually created
 
 ### UN metadata found here:https://population.un.org/wpp/Download/Files/4_Metadata/WPP2019_Data-Sources.pdf
+### and here: https://population.un.org/wpp/Download/Metadata/Documentation/
 ### country URI http://publications.europa.eu/resource/authority/country
 
 
-<http://publications.europa.eu/resource/authority/country/ARM>      ex:census       1959,
-                                                                                    1970,
-                                                                                    1979,
-                                                                                    1989,
-                                                                                    2001,
-                                                                                    2011 ;
-                                                                    ex:populationOfficialEstimates      2017 ;
-                                                                    ex:deFactoPopulationAdjustment      True ;
-                                                                    ex:subsequentTrends     True ;
-                                                                    ex:ageMother        2015 ;
-                                                                    ex:fertilityBirthHistory        2000,
-                                                                                                    2005,
-                                                                                                    2010,
-                                                                                                    2015 ;
-                                                                    ex:childMortalityBirthHistory       2000,
-                                                                                                        2005,
-                                                                                                        2010,
-                                                                                                        2015 ;
-                                                                    ex:officialEstimateInfantChildMortality     2017 ;
-                                                                    ex:overallMortalityOfficialEstimates        2016;
-                                                                    ex:adjustedForUnderregistration     True ;
-                                                                    ex:adjustedForUnderreporting        True ;
-                                                                    ex:estimatesDerivation              True .
+@prefix un:     <http://example.org/UN> .
+@prefix dct:    <http://purl.org/dc/terms/> .
 
+
+<http://publications.europa.eu/resource/authority/country/ARM>
+                un:hasMetadata  [
+                    un:locID            "51" ;
+                    un:iso3             "ARM" ;
+                    un:subRegID         "922" ;
+                    un:subRegName       "Western Asia" ;
+                    un:sdgRegID         "1833" ;
+                    un:sdgRegName       "Northern African and Western Asia" ;
+                    un:geoRegID         "935" ;
+                    un:geoRegName       "Asia" ;
+                    un:hasCatalogDetails   [
+                        un:dataCatalogID                "2042" ;
+                        un:dataCatalogShortName         "Estimates" ;
+                        un:dataCatalogName              "All source of estimates" ;
+                        un:dataProcessTypeID            "6" ;
+                        un:dataProcessType              "Estimate" ;
+                        un:dataProcessID                "6" ;
+                        un:dataProcess                  "Estimate" ;
+                        un:population                   "Used" ;
+                        un:fertility                    "Used" ;
+                        un:populationByAgeGlobalEstimatesLatest         "2017" ;
+                        un:populationByAgeOfficialEstimatesUnadjusted   "Used" ;
+                        un:populationByAgeOfficialEstimatesAdjusted     "Used" ;
+                        un:fertilityGlobalEstimates                     "Not Used" ;
+                        un:fertilityGlobalEstimatesLatest               "2017" ;
+                        un:fertilityRegisteredBirthsUnadjusted          "Used" 
+                    ] ,
+                    [
+                        un:dataCatalogID                "1526" ;
+                        un:dataCatalogShortName         "1959 Census" ;
+                        un:dataCatalogName              "Armenia 1959 Census" ;
+                        un:referenceYearStart           "1959" ;
+                        un:referenceYearEnd             "1959" ;
+                        un:dataProcessTypeID            "2" ;
+                        un:dataProcessType              "Census" ;
+                        un:dataProcessID                "2" ;
+                        un:dataProcess                  "Census" ;
+                        un:population                   "Used" ;
+                        un:populationByAgeCensusUnadjusted             "Used"
+                    ],
+                    [
+                        un:dataCatalogID                "1266" ;
+                        un:dataCatalogShortName         "1970 Census" ;
+                        un:dataCatalogName              "Armenia 1970 Census" ;
+                        un:referenceYearStart           "1970" ;
+                        un:referenceYearEnd             "1970" ;
+                        un:dataProcessTypeID            "2" ;
+                        un:dataProcessType              "Census" ;
+                        un:dataProcessID                "2" ;
+                        un:dataProcess                  "Census" ;
+                        un:population                   "Used" ;
+                        un:populationByAgeCensusUnadjusted             "Used"
+                    ],
+                    [
+                        un:dataCatalogID                "380" ;
+                        un:dataCatalogShortName         "1979 Census" ;
+                        un:dataCatalogName              "Armenia 1979 Census" ;
+                        un:referenceYearStart           "1979" ;
+                        un:referenceYearEnd             "1979" ;
+                        un:dataProcessTypeID            "2" ;
+                        un:dataProcessType              "Census" ;
+                        un:dataProcessID                "2" ;
+                        un:dataProcess                  "Census" ;
+                        un:population                   "Used" ;
+                        un:populationByAgeCensusUnadjusted             "Used"
+                    ],
+                    [
+                        un:dataCatalogID                "887" ;
+                        un:dataCatalogShortName         "1989 Census" ;
+                        un:dataCatalogName              "Armenia 1989 Census" ;
+                        un:referenceYearStart           "1989" ;
+                        un:referenceYearEnd             "1989" ;
+                        un:dataProcessTypeID            "2" ;
+                        un:dataProcessType              "Census" ;
+                        un:dataProcessID                "2" ;
+                        un:dataProcess                  "Census" ;
+                        un:population                   "Used" ;
+                        un:populationByAgeCensusUnadjusted             "Used"
+                    ],
+                    [
+                        un:dataCatalogID                "1848" ;
+                        un:dataCatalogShortName         "2000 DHS" ;
+                        un:dataCatalogName              "Armenia 2000 Demographic and Health Survey" ;
+                        un:referenceYearStart           "2000" ;
+                        un:referenceYearEnd             "2000" ;
+                        un:dataProcessTypeID            "11" ;
+                        un:dataProcessType              "Survey" ;
+                        un:dataProcessID                "16" ;
+                        un:dataProcess                  "DHS" ;
+                        un:fertility                    "Used" ;
+                        un:childMortality               "Used" ;
+                        un:fertilityBirthHistories      "Used" ;
+                        un:childMortalityFullBirthHistories         "Used" ;
+                        un:childMortalitySummaryBirthHistories      "Not Used"
+                    ],
+                    [
+                        un:dataCatalogID                "1298" ;
+                        un:dataCatalogShortName         "2001 Census" ;
+                        un:dataCatalogName              "Armenia 2001 Census" ;
+                        un:referenceYearStart           "2001" ;
+                        un:referenceYearEnd             "2001" ;
+                        un:dataProcessTypeID            "2" ;
+                        un:dataProcessType              "Census" ;
+                        un:dataProcessID                "2" ;
+                        un:dataProcess                  "Census" ;
+                        un:population                    "Used" ;
+                        un:populationByAgeCensusUnadjusted             "Used"
+                    ],
+                    [
+                        un:dataCatalogID                "1843" ;
+                        un:dataCatalogShortName         "2005 DHS" ;
+                        un:dataCatalogName              "Armenia 2005 Demographic and Health Survey" ;
+                        un:referenceYearStart           "2005" ;
+                        un:referenceYearEnd             "2005" ;
+                        un:dataProcessTypeID            "11" ;
+                        un:dataProcessType              "Survey" ;
+                        un:dataProcessID                "16" ;
+                        un:dataProcess                  "DHS" ;
+                        un:fertility                    "Used" ;
+                        un:childMortality               "Used" ;
+                        un:fertilityBirthHistories      "Used" ;
+                        un:childMortalityFullBirthHistories         "Used" ;
+                        un:childMortalitySummaryBirthHistories      "Not Used"
+                    ],
+                    [
+                        un:dataCatalogID                "5046" ;
+                        un:dataCatalogShortName         "2010 DHS" ;
+                        un:dataCatalogName              "Armenia 2010 Demographic and Health Survey" ;
+                        un:referenceYearStart           "2010" ;
+                        un:referenceYearEnd             "2010" ;
+                        un:dataProcessTypeID            "11" ;
+                        un:dataProcessType              "Survey" ;
+                        un:dataProcessID                "16" ;
+                        un:dataProcess                  "DHS" ;
+                        un:fertility                    "Used" ;
+                        un:childMortality               "Used" ;
+                        un:fertilityBirthHistories      "Used" ;
+                        un:childMortalityFullBirthHistories         "Used" ;
+                        un:childMortalitySummaryBirthHistories      "Not Used"
+                    ],
+                    [
+                        un:dataCatalogID                "4774" ;
+                        un:dataCatalogShortName         "2011 Census" ;
+                        un:dataCatalogName              "Armenia 2011 Census" ;
+                        un:referenceYearStart           "2011" ;
+                        un:referenceYearEnd             "2011" ;
+                        un:dataProcessTypeID            "2" ;
+                        un:dataProcessType              "Census" ;
+                        un:dataProcessID                "2" ;
+                        un:dataProcess                  "Census" ;
+                        un:population                   "Used" ;
+                        un:populationByAgeCensusUnadjusted             "Used"
+                    ],
+                    [
+                        un:dataCatalogID                "5806" ;
+                        un:dataCatalogShortName         "2015 DHS" ;
+                        un:dataCatalogName              "Armenia 2015-16 Demographic and Health Survey" ;
+                        un:referenceYearStart           "2015" ;
+                        un:referenceYearEnd             "2016" ;
+                        un:dataProcessTypeID            "11" ;
+                        un:dataProcessType              "Survey" ;
+                        un:dataProcessID                "16" ;
+                        un:dataProcess                  "DHS" ;
+                        un:fertility                    "Used" ;
+                        un:childMortality               "Used" ;
+                        un:fertilityBirthHistories      "Used" ;
+                        un:childMortalityFullBirthHistories         "Used" ;
+                        un:childMortalitySummaryBirthHistories      "Not Used"
+                    ],
+                    [
+                        un:dataCatalogID                "439" ;
+                        un:dataCatalogShortName         "Register" ;
+                        un:dataCatalogName              "Vital Registration" ;
+                        un:referenceYearStart           "1981" ;
+                        un:dataProcessTypeID            "9" ;
+                        un:dataProcessType              "Register" ;
+                        un:dataProcessID                "36" ;
+                        un:dataProcess                  "DHS" ;
+                        un:childMortality               "Considered" ;
+                        un:overallMortality             "Used" ;
+                        un:childMortalityOfficialEstimates                      "Considered" ;
+                        un:overallMortalityDataProcess                          "VR" ;
+                        un:overallMortalityOfficialEstimates                    "Used" ;
+                        un:overallMortalityRegisteredDeathsAdjusted             "Used" ;
+                        un:overallMortalityRegisteredDeathsAdjustedUnderFive    "Used" ;
+                        un:overallMortalityAgeSpecificTypeOfPattern             "Empirical" 
+                    ] 
+                ] .

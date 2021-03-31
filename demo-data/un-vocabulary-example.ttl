@@ -10,127 +10,487 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 
-### POPULATION ###
-
-<https://elsst.cessda.eu/id/c80d7b6c-78b9-4a0e-ab43-941d89888b02>    # POPULATION term in ELSST
-                        a                   skos:Concept ;
-                        skos:inScheme       <https://elsst.cessda.eu/id/> ;
-                        skos:topConceptOf   <https://elsst.cessda.eu/id/> ;
-                        skos:prefLabel      "POPULATION"@en .
-
-ex:census               a                   rdf:Property , 
-                                            owl:ObjectProperty ;
-                        rdfs:domain         ex:population ;
-                        rdfs:range          xsd:gYear ;
-                        rdfs:label          "Census"@en ;
-                        skos:definition     "Census years property related to population"@en .
-
-ex:populationOfficialEstimates  a                   rdf:Property , 
-                                                    owl:ObjectProperty ;
-                                rdfs:domain         ex:population ;
-                                rdfs:range          xsd:gYear ;
-                                rdfs:label          "Population Official Estimates"@en ;
-                                skos:definition     "Official estimates through years related to population"@en .
-
-ex:deFactoPopulationAdjustment          a                   rdf:Property , 
-                                                            owl:ObjectProperty ;
-                                        rdfs:domain         ex:population ;
-                                        rdfs:range          xsd:boolean ;
-                                        rdfs:label          "De Facto Population Adjustment"@en ;
-                                        skos:definition     "Whether or not De Facto Population Adjustment has happened"@en .
-
-ex:subsequentTrends     a                   rdf:Property , 
-                                            owl:ObjectProperty ;
-                        rdfs:domain         ex:population ;
-                        rdfs:range          xsd:boolean ;
-                        rdfs:label          "Subsequent Trends"@en ;
-                        skos:definition     "Whether or not estimates of the subsequent trends in fertility, mortality, and international migration have been considered"@en .
+un:
+        a               owl:Ontology ;
+        rdfs:label      "UN"@en  .
 
 
-### FERTILITY ###
+### METADATA
 
-ex:fertility            a                   rdfs:Class , 
-                                            owl:Class ;
-                        rdfs:label          "Fertility"@en ;
-                        skos:definition     "Total fertility rate and age pattern of fertility based on related property"@en .
-
-ex:ageMother            a                   rdf:Property , 
-                                            owl:ObjectProperty ;
-                        rdfs:domain         ex:fertility ;
-                        rdfs:range          xsd:gYear ;
-                        rdfs:label          "Age Mother"@en ;
-                        skos:definition     "Registered births classified by age of mother and the underlying female population by age through the year/years of: "@en .
-
-ex:fertilityBirthHistory        a                   rdf:Property , 
-                                                    owl:ObjectProperty ;
-                                rdfs:domain         ex:fertility ;
-                                rdfs:range          xsd:gYear ;
-                                rdfs:label          "Fertility Birth-History"@en ;
-                                skos:definition     "Years of birth-histories fertility data"@en .
-
-
-### CHILD MORTALITY ###
-
-ex:childMortality       a                   rdfs:Class , 
-                                            owl:Class ;
-                        rdfs:label          "Child Mortality"@en ;
-                        skos:definition     "Under-five mortality based on related property"@en .
-
-ex:childMortalityBirthHistory       a                   rdf:Property , 
-                                                        owl:ObjectProperty ;
-                                    rdfs:domain         ex:childMortality ;
-                                    rdfs:range          xsd:gYear ;
-                                    rdfs:label          "Child Mortality Birth-History"@en ;
-                                    skos:definition     "Years of birth-histories child mortality data"@en .
-
-ex:officialEstimateInfantChildMortality     a                   rdf:Property , 
-                                                                owl:ObjectProperty ;
-                                            rdfs:domain         ex:childMortality ;
-                                            rdfs:range          xsd:gYear ;
-                                            rdfs:label          "Official Estimates Infant and Child Mortality"@en ;
-                                            skos:definition     "Years of which official estimates of infant and child mortality have been considered"@en .
-           
-
-### OVERALL MORTALITY ###
-
-ex:overallMortality     a                   rdfs:Class , 
-                                            owl:Class ;
-                        rdfs:label          "Overall Mortality"@en ;
-                        skos:definition     "Life expectancy at birth and age pattern of mortality based on related property"@en .
-
-ex:overallMortalityOfficialEstimates    a                   rdf:Property , 
-                                                                owl:ObjectProperty ;
-                                            rdfs:domain         ex:overallMortality ;
-                                            rdfs:range          xsd:gYear ;
-                                            rdfs:label          "Overall Mortality Official Estimates"@en ;
-                                            skos:definition     "Years of which official estimated of overall mortality have been considered"@en .
-
-ex:adjustedForUnderregistration     a                   rdf:Property , 
-                                                        owl:ObjectProperty ;
-                                    rdfs:domain         ex:overallMortality ;
-                                    rdfs:range          xsd:boolean ;
-                                    rdfs:label          "Adjusted For Underregistration"@en ;
-                                    skos:definition     "Whether or not Underregistration has been adjusted"@en .
-
-ex:adjustedForUnderreporting        a                   rdf:Property , 
-                                                        owl:ObjectProperty ;
-                                    rdfs:domain         ex:overallMortality ;
-                                    rdfs:range          xsd:boolean ;
-                                    rdfs:label          "Adjusted For Underreporting"@en ;
-                                    skos:definition     "Whether or not Underreporting of infant and child deaths has been adjusted"@en .
+un:hasMetadata         
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: ;
+        skos:inScheme       un: ;
+        rdfs:range          [
+            a owl:Class ;
+            owl:unionOf     ( 
+                un:MetadataTerms
+                un:CatalogTerms
+                un:PopulationByAgeTerms
+                un:FertilityTerms
+                un:ChildMortalityTerms
+                un:OverallMortalityTerms
+                un:AdultMortalityTerms
+                ) ;
+        ] .
+                      
+un:MetadataTerms   
+        a                   skos:Collection ;
+        rdfs:idDefinedBy    un: ;
+        skos:member         un:notes ,
+                            un:locID,
+                            un:iso3,
+                            un:topPop2019LessThan90K ,
+                            un:subRegID,
+                            un:subRegName,
+                            un:sdgRegID,
+                            un:sdgRegName,
+                            un:geoRegID,
+                            un:geoRegName .
 
 
-### MIGRATION ###
+un:notes
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
 
-ex:migration            a                   rdfs:Class , 
-                                            owl:Class ;
-                        rdfs:label          "Migration"@en ;
-                        skos:definition     "International migration based on related property"@en .
+un:locID
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
 
-ex:estimatesDerivation   a                   rdf:Property , 
-                                            owl:ObjectProperty ;
-                        rdfs:domain         ex:migration ;
-                        rdfs:range          xsd:boolean ;
-                        rdfs:label          "Estimates Derivation"@en ;
-                        skos:definition     "Whether or not Estimates have been derived as the differences between overall population growth and natural increase"@en .
+un:iso3
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
 
+un:topPop2019LessThan90K
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:subRegID
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:subRegName
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:sdgRegID
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:sdgRegName
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:geoRegID
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:geoRegName
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+
+### OVERALL
+
+un:CatalogTerms
+        a                   skos:Collection ;
+        rdfs:idDefinedBy    un: ;
+        skos:member         un:dataCatalogID,
+                            un:dataCatalogShortName,
+                            un:dataCatalogName,
+                            un:referenceYearStart,
+                            un:referenceYearEnd,
+                            un:dataProcessTypeID,
+                            un:dataProcessType ,
+                            un:dataProcessID ,
+                            un:dataProcess ,
+                            un:population ,
+                            un:fertility ,
+                            un:childMortality ,
+                            un:adultMortality ,
+                            un:overallMortality .
+
+un:dataCatalogID
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:dataCatalogShortName
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:dataCatalogName
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:referenceYearStart
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:referenceYearEnd
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:dataProcessTypeID
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:dataProcessType
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:dataProcessID
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:dataProcess
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:population
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertility
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:childMortality
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .        
+
+un:adultMortality
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .  
+
+un:overallMortality
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .  
+
+
+### POPULATION BY AGE
+
+un:PopulationByAgeTerms
+        a                   skos:Collection ;
+        rdfs:idDefinedBy    un: ;
+        skos:member         un:populationByAgeGlobalEstimates,
+                            un:populationByAgeGlobalEstimatesLatest,
+                            un:populationByAgeCensusUnadjusted,
+                            un:populationByAgeCensusAdjusted,
+                            un:populationByAgeRegisterUnadjusted,
+                            un:populationByAgeSurveyEstimates,
+                            un:populationByAgeOfficialEstimatesUnadjusted ,
+                            un:populationByAgeOfficialEstimatesAdjusted ,
+                            un:populationByAgeTotalPopulationOnly .
+
+un:populationByAgeGlobalEstimates 
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: . 
+
+un:populationByAgeGlobalEstimatesLatest
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:populationByAgeCensusUnadjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:populationByAgeCensusAdjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:populationByAgeRegisterUnadjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:populationByAgeSurveyEstimates
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:populationByAgeOfficialEstimatesUnadjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:populationByAgeOfficialEstimatesAdjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:populationByAgeTotalPopulationOnly
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+
+### FERTILITY
+
+un:FertilityTerms
+        a                   skos:Collection ;
+        rdfs:idDefinedBy    un: ;
+        skos:member         un:fertilityGlobalEstimates ,
+                            un:fertilityGlobalEstimatesLatest ,
+                            un:fertilityOfficialEstimates ,
+                            un:fertilityRegisteredBirthsUnadjusted ,
+                            un:fertilityRegisteredBirthsAdjusted ,
+                            un:fertilityBirthHistories ,
+                            un:fertilityPeriodParityProgressionRatios ,
+                            un:fertilityRecentBirths ,
+                            un:fertilityAdjustedAsfrBrassPfRatio ,
+                            un:fertilityAdjustedAsfrArrigaPfRatio ,
+                            un:fertilityRelationalGompertzModel ,
+                            un:fertilityChildrenEvenBornOneSource ,
+                            un:fertilityCohortParityIncrementTwoSources ,
+                            un:fertilityReverseSurvival ,
+                            un:fertilityOwnChildrenMethod ,
+                            un:fertilityReconstructedBirthHistories ,
+                            un:fertilityStablePopulation ,
+                            un:fertilityCohortCompletedFertility .
+
+un:fertilityGlobalEstimates
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityGlobalEstimatesLatest
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityOfficialEstimates
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityRegisteredBirthsUnadjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityRegisteredBirthsAdjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityBirthHistories
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityPeriodParityProgressionRatios
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityRecentBirths
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityAdjustedAsfrBrassPfRatio
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityAdjustedAsfrArrigaPfRatio
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityRelationalGompertzModel
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityChildrenEvenBornOneSource
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityCohortParityIncrementTwoSources
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityReverseSurvival
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityOwnChildrenMethod
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityReconstructedBirthHistories
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityStablePopulation
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:fertilityCohortCompletedFertility
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+
+### CHILD MORTALITY
+
+un:ChildMortalityTerms
+        a                   skos:Collection ;
+        rdfs:idDefinedBy    un: ;
+        skos:member         un:childMortalityBasedOnNeighbouringCountries ,
+                            un:childMortalityGlobalEstimates ,
+                            un:childMortalityGlobalEstimatesLatest ,
+                            un:childMortalityOfficialEstimates ,
+                            un:childMortalityRegisteredDeathsUnadjusted ,
+                            un:childMortalityRegisteredDeathsAdjusted ,
+                            un:childMortalityFullBirthHistories ,
+                            un:childMortalitySummaryBirthHistories ,
+                            un:childMortalityHouseholdDeaths .
+
+un:childMortalityBasedOnNeighbouringCountries
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:childMortalityGlobalEstimates
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:childMortalityGlobalEstimatesLatest
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:childMortalityOfficialEstimates
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:childMortalityRegisteredDeathsUnadjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:childMortalityRegisteredDeathsAdjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:childMortalityFullBirthHistories
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:childMortalitySummaryBirthHistories
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:childMortalityHouseholdDeaths
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+
+### OVERALL MORTALITY
+
+un:OverallMortalityTerms
+        a                   skos:Collection ;
+        rdfs:idDefinedBy    un: ;
+        skos:member         un:overallMortalityDataProcess,
+                            un:overallMortalityBasedOnNeighbouringCountries ,
+                            un:overallMortalityGlobalEstimates ,
+                            un:overallMortalityGlobalEstimatesLatest ,
+                            un:overallMortalityOfficialEstimates ,
+                            un:overallMortalityRegisteredDeaths ,
+                            un:overallMortalityRegisteredDeathsUnadjusted ,
+                            un:overallMortalityRegisteredDeathsAdjusted ,
+                            un:overallMortalityRegisteredDeathsAdjustedAdultGGB ,
+                            un:overallMortalityRegisteredDeathsAdjustedAdultDDM ,
+                            un:overallMortalityRegisteredDeathsAdjustedUnderFive ,
+                            un:overallMortalityRegisteredDeathsAdjustedAtOlderAge ,
+                            un:overallMortalityRegisteredDeathsForwardBackwardProjected ,
+                            un:overallMortalityAgeSpecificTypeOfPattern ,
+                            un:overallMortalityAgeSpecificTypeOfModel ,
+                            un:overallMortalityAgeSpecificTypeOfInputs ,
+                            un:overallMortalityDerivedFromChildMortality ,
+                            un:overallMortalityUseAdultMortality ,
+                            un:overallMortalityHivAidsMortalityImpact .
+
+un:overallMortalityDataProcess
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityBasedOnNeighbouringCountries
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityGlobalEstimates
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityGlobalEstimatesLatest
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityOfficialEstimates
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityRegisteredDeaths
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityRegisteredDeathsUnadjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityRegisteredDeathsAdjusted
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityRegisteredDeathsAdjustedAdultGGB
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityRegisteredDeathsAdjustedAdultDDM
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityRegisteredDeathsAdjustedUnderFive
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityRegisteredDeathsAdjustedAtOlderAge
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityRegisteredDeathsForwardBackwardProjected
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityAgeSpecificTypeOfPattern
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityAgeSpecificTypeOfModel
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityAgeSpecificTypeOfInputs
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityDerivedFromChildMortality
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityUseAdultMortality
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+un:overallMortalityHivAidsMortalityImpact
+        a                   rdf:Property , owl:ObjectProperty, skos:Concept ;
+        rdfs:isDefinedBy    un: .
+
+
+### ADULT MORTALITY
+
+un:AdultMortalityTerms
+        a                   skos:Collection ;
+        rdfs:idDefinedBy    un: ;
+        skos:member         un:overallMortalityDataProcess,
+                            un:overallMortalityBasedOnNeighbouringCountries ,
+                            un:overallMortalityGlobalEstimates ,
+                            un:overallMortalityGlobalEstimatesLatest ,
+                            un:overallMortalityOfficialEstimates ,
+                            un:overallMortalityRegisteredDeaths ,
+                            un:overallMortalityRegisteredDeathsUnadjusted ,
+                            un:overallMortalityRegisteredDeathsAdjusted ,
+                            un:overallMortalityRegisteredDeathsAdjustedAdultGGB ,
+                            un:overallMortalityRegisteredDeathsAdjustedAdultDDM ,
+                            un:overallMortalityRegisteredDeathsAdjustedUnderFive ,
+                            un:overallMortalityRegisteredDeathsAdjustedAtOlderAge ,
+                            un:overallMortalityRegisteredDeathsForwardBackwardProjected ,
+                            un:overallMortalityAgeSpecificTypeOfPattern ,
+                            un:overallMortalityAgeSpecificTypeOfModel ,
+                            un:overallMortalityAgeSpecificTypeOfInputs ,
+                            un:overallMortalityDerivedFromChildMortality ,
+                            un:overallMortalityUseAdultMortality ,
+                            un:overallMortalityHivAidsMortalityImpact .
