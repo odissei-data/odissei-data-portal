@@ -6,7 +6,7 @@
 ### country URI http://publications.europa.eu/resource/authority/country
 
 
-@prefix un:     <http://example.org/UN> .
+@prefix un:     <http://example.org/UN/> .
 @prefix dct:    <http://purl.org/dc/terms/> .
 
 
