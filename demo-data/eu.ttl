@@ -1,0 +1,39 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ns0: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix ns1: <http://lemon-model.net/lemon#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix ns2: <http://publications.europa.eu/ontology/authority/> .
+@prefix ns3: <http://publications.europa.eu/resource/authority/> .
+@prefix ns4: <http://www.opengis.net/ont/geosparql#> .
+
+<http://publications.europa.eu/resource/authority/country/IDN>
+  a skos:Concept, <http://publications.europa.eu/ontology/euvoc#Country> ;
+  dc:created "2010-01-01"^^xsd:date ;
+  owl:versionInfo "20210317-0" ;
+  skos:exactMatch <https://sws.geonames.org/1643084/>;
+  skos:inScheme <http://publications.europa.eu/resource/authority/country> ;
+  skos:prefLabel "Indonezija"@hr, "Ινδονησία"@el, "Индонезия"@bg, "Indonesia"@es, "Indonésie"@cs, "Indonezia"@ro, "Indoneesia"@et, "Indonezja"@pl, "An Indinéis"@ga, "Indonesien"@da, "Indonézia"@hu, "Indonezija"@lt, "Indonesia"@it, "Indonésie"@fr, "Indonesia"@fi, "Indonesië"@nl, "Indonesien"@sv, "L-Indoneżja"@mt, "Indonēzija"@lv, "Indonézia"@sk, "Indonezija"@sl, "Indonesia"@en, "Indonésia"@pt, "Indonesien"@de ;
+  ns0:startDate "1949-12-27"^^xsd:date ;
+  dc:language <http://publications.europa.eu/resource/authority/language/IND> ;
+  dc:type <http://publications.europa.eu/resource/authority/membership-classification/OTHER> ;
+  ns1:context <http://publications.europa.eu/resource/authority/use-context/EFORMS>, <http://publications.europa.eu/resource/authority/use-context/EURLEX>, <http://publications.europa.eu/resource/authority/use-context/ESPD>, <http://publications.europa.eu/resource/authority/use-context/EU_REC>, <http://publications.europa.eu/resource/authority/use-context/TED_SCHEMA>, <http://publications.europa.eu/resource/authority/use-context/IMMC>, <http://publications.europa.eu/resource/authority/use-context/ODP>, <http://publications.europa.eu/resource/authority/use-context/COUNTRY>, <http://publications.europa.eu/resource/authority/use-context/TED> ;
+  dc:dateAccepted "2012-06-27"^^xsd:date ;
+  dc:dateSubmitted "2011-10-06"^^xsd:date ;
+  skos:notation "RI"^^ns0:FD_010, "ID"^^ns0:TED, "ID"^^ns0:TED_SCHEMA, "RI"^^ns0:FD_400, "ID"^^ns0:ISG_COU ;
+  skos:topConceptOf <http://publications.europa.eu/resource/authority/country> ;
+  ns0:status <http://publications.europa.eu/resource/authority/concept-status/CURRENT> ;
+  dc11:identifier "IDN" ;
+  ns2:authority-code "IDN" ;
+  ns2:deprecated "false" ;
+  ns2:op-code "IDN" ;
+  ns2:start.use "1949-12-27" ;
+  ns3:op-code "IDN" ;
+  ns4:sfWithin <http://publications.europa.eu/resource/authority/continent/ASIA> .
+
+
+ 
+
