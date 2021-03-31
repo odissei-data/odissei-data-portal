@@ -1,0 +1,28 @@
+<https://sws.geonames.org/1643084/>
+  a <http://www.geonames.org/ontology#Feature> ;
+  rdfs:isDefinedBy <https://sws.geonames.org/1643084/about.rdf> ;
+  ns0:name "Indonesia" ;
+  ns0:alternateName "인도네시아"@ko, "ኢንዶኔዢያ"@am, "インドネシア"@ja, "ອິນໂດເນເຊຍ"@lo, "ឥណ្ឌូនេស៊ី"@km, "อินโดนีเซีย"@th, "ประเทศอินโดนีเซีย"@th, "สาธารณรัฐอินโดนีเซีย"@th, "An Indinéis"@ga, "bidgu'e"@jbo, "Dutch East Indies", "Endonezi"@ht, "Endonezya"@ku, "Endonezya"@tr, "Indes orientales néerlandaises"@fr, "Indoneesia"@et, "Indoneesiya"@so, "Indonesi"@kw, "Indonesia"@an, "Indonesia"@ast, "Indonesia"@cy, "Indonesia"@eu, "Indonesia"@fi, "Indonesia"@gl, "Indonesia"@ia, "Indonesia"@id, "Indonesia"@ilo, "Indonesia"@it, "Indonesia"@jv, "Indonesia"@la, "Indonesia"@ms, "Indonesia"@na, "Indonesia"@nb, "Indonesia"@nn, "Indonesia"@no, "Indonesia"@oc, "Indonesia"@pam, "Indonesia"@se, "Indonesia"@sw, "Indonesia"@tl, "Indonesia"@vi, "Indonésia"@pt, "Indonésia"@su, "Indonèsia"@ca, "Indónesía"@is, "Indonésie"@cs, "Indonesië"@af, "Indonesië"@li, "Indonesië", "Indonesien"@da, "Indonesien"@de, "Indonesien"@lb, "Indonesien"@nds, "Indonesien"@sv, "Indonesiya"@ku, "Indoneska"@hsb, "Indonezi"@sq, "Indonezia"@io, "Indonezia"@ro, "Indonezia"@sq, "Indonézia"@hu, "Indonézia"@sk, "Indonézia"@tet, "Indonezija"@bs, "Indonezija"@hr, "Indonezija"@lt, "Indonezija"@sl, "Indonēzija"@lv, "Indonezio"@eo, "Indoneziýa"@tk, "Indonezja"@pl, "Indoneżja"@mt, "Indunesia"@scn, "Indunisya"@qu, "Initonīhia"@mi, "Lindäna-Seänuäns"@vo, "Nam Dương"@vi, "Nederlandsch-Indië"@nl, "Nederlands-Indië"@nl, "Netherland India", "Netherlands Indies", "Oost-Indien"@nl, "Republic of Indonesia"@en, "Republiek de Verenigde Staten van Indonesië", "Republik Indonesia", "Républik Indonésia"@su, "Republik Indonesia Serikat", "United States of Indonesia", "Yndoneezje"@fy, "اندونزی"@fa, "اندونیزیا"@ps, "اندونېزيا"@ps, "إندونيسيا"@ar, "اندونيسيا"@ar, "ھىندۇنېزىيە"@ug, "אינדונזיה"@he, "Ινδονησία"@el, "Индонези"@cv, "Индонезија"@mk, "Индонезија"@sr, "Индонезия"@bg, "Индонезия"@ru, "Индонезия"@tg, "Індонезія"@uk, "Ինդոնեզիա"@hy, "ინდონეზია"@ka, "इन्दोनेशिया"@sa, "इंडोनेशिया"@hi, "ఇండోనేసియా"@te, "இந்தோனேசியா"@ta, "இந்தோனேஷியா"@ta, "ഇന്തോനേഷ്യ"@ml, "ইন্দোনেশিয়া"@bn, "印度尼西亚"@zh ;
+  ns0:officialName "ኢንዶኔዢያ"@ti, "ଇଣ୍ଡୋନେସିଆ"@or, "Ɛndonezi"@bm, "Enndonesii"@ff, "Ênndonezïi"@sg, "i-Indonesia"@zu, "Indɔnehyia"@ak, "Indonesia"@es, "Indonesia"@fo, "Indonesia"@ki, "Indonesia"@kl, "Indonesia"@rm, "Indonesia"@sn, "Indonesia nutome"@ee, "Indonésie"@fr, "Indonesiya"@nd, "In-đô-nê-xi-a (Nam Dương)"@vi, "Indonezi"@ln, "Indonezi"@lu, "Indonezia"@br, "Indonezia"@mg, "Indoneziya"@rn, "İndoneziya"@az, "Indunusiya"@ha, "ʻInitonēsia"@to, "Orílẹ́ède Indonesia"@yo, "Republiek Indonesië"@nl, "Yindonezya"@lg, "اندوزی"@fa, "انڈونیشیا"@ur, "ئیندۆنیزیا"@ku, "Индонезия"@kk, "Інданезія"@be, "ཨིན་ཌོ་ནེ་ཤི་ཡ།"@bo, "इन्डोनेशिया"@hi, "इन्डोनेशिया"@ne, "इंडोनेशिया"@mr, "ઇન્ડોનેશિયા"@gu, "ఇండోనేషియా"@te, "ಇಂಡೋನೇಶಿಯಾ"@kn, "ഇന്‍ഡോനേഷ്യ"@ml, "ইন্দোনেশিয়া"@bn, "အင်ဒိုနီးရှား"@my, "ඉන්දුනීසියාව"@si, "インドネシア共和国"@ja ;
+  ns0:shortName "Indonesia"@en, "Indonesië"@nl ;
+  ns0:featureClass <https://www.geonames.org/ontology#A> ;
+  ns0:featureCode <https://www.geonames.org/ontology#A.PCLI> ;
+  ns0:countryCode "ID" ;
+  ns0:population "267663435" ;
+  geo:lat "-5" ;
+  geo:long "120" ;
+  ns0:parentFeature <https://sws.geonames.org/11812363/>, <https://sws.geonames.org/12217089/>, <https://sws.geonames.org/7729896/> ;
+  ns0:childrenFeatures <https://sws.geonames.org/1643084/contains.rdf> ;
+  ns0:neighbouringFeatures <https://sws.geonames.org/1643084/neighbours.rdf> ;
+  ns0:locationMap <https://www.geonames.org/1643084/republic-of-indonesia.html> ;
+  ns0:wikipediaArticle <https://en.wikipedia.org/wiki/Dutch_East_Indies>, <https://en.wikipedia.org/wiki/Indonesia>, <https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D0%B4%D0%BE%D0%BD%D0%B5%D0%B7%D0%B8%D1%8F> ;
+  rdfs:seeAlso <https://dbpedia.org/resource/Dutch_East_Indies>, <https://dbpedia.org/resource/Indonesia> .
+
+<https://sws.geonames.org/1643084/about.rdf>
+  a foaf:Document ;
+  foaf:primaryTopic <https://sws.geonames.org/1643084/> ;
+  cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  cc:attributionURL <https://www.geonames.org> ;
+  cc:attributionName "GeoNames"^^ns1:string ;
+  dc:created "2006-01-15"^^ns1:date ;
+  dc:modified "2020-03-29"^^ns1:date .
