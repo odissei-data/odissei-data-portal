@@ -1,0 +1,276 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix ns0: <http://www.w3.org/ns/adms#> .
+@prefix ns1: <https://data.overheid.nl/dcat.rdf#> .
+@prefix ns2: <http://www.w3.org/2006/vcard/> .
+
+<https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3>
+  dc:issued "2020-04-02T15:36:08.994427"^^xsd:datetime ;
+  rdfs:isDefinedBy <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899.rdf>, <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3.rdf> ;
+  dc:title "415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899"@nl ;
+  dc:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+  dct:spatial <http://publications.europa.eu/resource/authority/country/IDN>;
+  dct:spatial <http://publications.europa.eu/resource/authority/country/NLD>;
+  dct:spatial <http://publications.europa.eu/resource/authority/country/SUR>;
+  dc:description """Deze tabel bevat de belangrijkste kerncijfers over de bevolking, huishoudens en bevolkingsontwikkeling in Nederland.
+
+In de tabel worden de volgende gegevens onderscheiden:
+- Bevolking; 
+- Particuliere huishoudens;
+- Levend geboren kinderen;
+- Sterfte;
+- Verhuisde personen;
+- Huwelijkssluiting;
+- Huwelijksontbinding;
+- Wijziging van nationaliteit.
+
+Gegevens beschikbaar vanaf: 1899
+
+Status van de cijfers:
+Alle cijfers in de tabel zijn definitief.
+
+Wijzigingen per 24 maart 2020:
+De tabel is herzien. 
+De volgende wijzigingen zijn doorgevoerd:
+
+Bevolking op 1 januari: 
+- Het aantal 'Vrouwen' in 2012 is gecorrigeerd. 
+- De cijfers van 'Migratieachtergrond Suriname' en 'Migratieachtergrond (voormalige) Nederlandse Antillen' zijn voor 1971 tot en met 1994 gewijzigd. De wijziging is het gevolg van een methodewijziging in het verleden, die destijds niet is doorgevoerd in de tabel. De cijfers komen nu overeen met elders op StatLine.
+
+Bevolkingsontwikkeling: 
+'Emigratie' is gewijzigd in 'Emigratie inclusief administratieve correcties', 'Migratiesaldo' is gewijzigd in 'Migratiesaldo inclusief administratieve correcties'. Cijfers over emigratie inclusief het saldo van de administratieve correcties geven een beter beeld van de werkelijke emigratie dan cijfers over emigratie exclusief deze correcties. Door de wijziging zijn de cijfers over de perioden 1977 tot en met 2016 veranderd. 
+
+Levend geboren kinderen:
+De cijfers over 2015 van Levend geboren kinderen uit moeders van 25 tot 30 jaar relatief en Levend geboren kinderen uit moeders van 30 jaar of ouder relatief zijn gecorrigeerd. 
+
+Sterfte:
+- De cijfers van de 'Levensverwachting bij geboorte: mannen' en 'Levensverwachting bij geboorte: vrouwen' over 1950 tot en met 1962, 1972, 1982, 1991, 1999, 2009 en 2011 zijn gecorrigeerd. 
+- De cijfers van 'Sterfte < 1 jaar na de geboorte, relatief' over 1994 en 2011 zijn gecorrigeerd. 
+- Het cijfer van 'Sterfte < 1 jaar na de geboorte, relatief' over 2011 is gecorrigeerd. 
+- Overleden naar doodoorzaak zijn verwijderd uit de tabel.
+
+Buitenlandse migratie naar nationaliteit:
+- Diverse onderwerpen met betrekking tot 'Emigratie inclusief administratieve correcties' zijn toegevoegd.
+- 'Totaal immigratie' is over 1993 en 1996 gecorrigeerd. 
+- 'Immigratie, Europese Unie (exclusief Nederland)' is over 2004 en 2013 aangepast. 
+- 'Emigratie exclusief administratieve correcties, Nederlands' is over 1995 en 2012 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Totaal niet-Nederlands' is over 1995 en 2012 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Europese Unie' is over 2004, 2005 en 2013 aangepast. 
+
+Buitenlandse migratie naar geboorteland:
+- Diverse onderwerpen met betrekking tot 'Emigratie inclusief administratieve correcties' zijn toegevoegd.
+- 'Totaal immigratie' is over 1993 en 1996 gecorrigeerd. 
+- 'Immigratie, Europese Unie (exclusief Nederland)' is over 1987 tot en met 1990 en 2004 aangepast.
+- 'Immigratie, Suriname en de Nederlandse Antillen' is over 2012 gecorrigeerd. 
+- 'Immigratie, Nederlandse Antillen' is over 2012 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Europese Unie (exclusief Nederland)' is over 1989, 1999 en 2004 aangepast. 
+- 'Emigratie exclusief administratieve correcties, Indonesië' is over 1994 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Suriname en Nederlandse Antillen' is over 1997 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Nederlandse Antillen' is over 1997 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Specifieke emigratiegebieden' is over 1995 gecorrigeerd. 
+
+Buitenlandse migratie naar land van herkomst/bestemming:
+- 'Totaal immigratie' is over 1996 gecorrigeerd. 
+- 'Immigratie, Europese Unie (exclusief Nederland)' is over 2004 aangepast. 
+- 'Immigratie, Indonesië, Suriname en de Nederlandse Antillen' is over 2007 en 2010 tot en met 2016 gecorrigeerd. 
+- 'Immigratie, Suriname en de Nederlandse Antillen' is over 2010 tot en met 2016 gecorrigeerd. 
+- 'Immigratie, Indonesië' is over 2013 gecorrigeerd. 
+- 'Immigratie, Nederlandse Antillen' is over 2010 tot en met 2016 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Europese Unie (exclusief Nederland)' is over 1998 en 2004 aangepast. 
+- 'Emigratie exclusief administratieve correcties, Indonesië, Suriname en de Nederlandse Antillen' is over 2010 tot en met 2016 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Suriname en Nederlandse Antillen' is over 2010 tot en met 2016 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Nederlandse Antillen' is over 2010 tot en met 2016 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Turkije' is over 2012 gecorrigeerd. 
+ 
+De correcties zijn het gevolg van handmatige acties. De verschillen zijn afrondverschillen en zijn minimaal.
+De aanpassingen met betrekking tot de Europese Unie zijn over het algemeen het gevolg van een veranderde berekeningswijze.
+
+Wanneer komen er nieuwe cijfers uit?
+De cijfers over de bevolkingsontwikkeling van 2019 en de bevolking per 1 januari 2020 worden in het vierde kwartaal van 2020 gepubliceerd."""@nl ;
+  dc:modified "2021-03-29T01:57:44.465193"^^xsd:datetime ;
+  foaf:primaryTopic <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899> ;
+  a dcat:CatalogRecord ;
+  ns0:status ":updated"@nl .
+
+<http://publications.europa.eu/resource/authority/file-type/JSON>
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> ;
+  a <https://data.overheid.nl/dcat.rdf#Format> .
+
+<https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899>
+  dcat:theme <http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid> ;
+  dcat:landingPage <https://opendata.cbs.nl/statline/portal.html?_la=nl&_catalog=CBS&tableId=37556> ;
+  ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+  ns1:publisher <http://standaarden.overheid.nl/owms/terms/Centraal_Bureau_voor_de_Statistiek> ;
+  ns1:sourceCatalog <https://opendata.cbs.nl/ODataCatalog/> ;
+  dc:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+  ns0:identifier <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899>, <https://data.overheid.nl/data/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3>, <https://data.overheid.nl/data/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899>, <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3> ;
+  dcat:distribution [
+    dc:title "Feed"@nl ;
+    ns1:distributionType <https://data.overheid.nl/distributiontype/webservice> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/atom+xml> ;
+    rdfs:isDefinedBy <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3.rdf>, <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899.rdf> ;
+    dcat:downloadURL <https://opendata.cbs.nl/ODataFeed/OData/37556> ;
+    dcat:accessURL <https://opendata.cbs.nl/statline/#/CBS/nl/dataset/37556/table> ;
+    dc:license <http://creativecommons.org/licenses/by/4.0> ;
+    dc:description """Bevolking, huishoudens, geboorte, sterfte, verhuisde personen, 
+huwelijkssluiting en huwelijksontbinding in Nederland"""@nl ;
+    dc:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    dc:issued "2020-09-07T18:10:10.339167"^^xsd:datetime ;
+    dc:format <http://publications.europa.eu/resource/authority/file-type/ATOM> ;
+    a ns1:Distribution
+  ], [
+    dcat:downloadURL <https://opendata.cbs.nl/ODataApi/OData/37556> ;
+    dc:title "API"@nl ;
+    dc:description """Bevolking, huishoudens, geboorte, sterfte, verhuisde personen, 
+huwelijkssluiting en huwelijksontbinding in Nederland"""@nl ;
+    ns1:distributionType <https://data.overheid.nl/distributiontype/webservice> ;
+    dc:license <http://creativecommons.org/licenses/by/4.0> ;
+    rdfs:isDefinedBy <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3.rdf>, <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899.rdf> ;
+    dc:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> ;
+    dc:issued "2020-09-07T18:10:10.339158"^^xsd:datetime ;
+    dc:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    dcat:accessURL <https://opendata.cbs.nl/statline/#/CBS/nl/dataset/37556/table> ;
+    a ns1:Distribution
+  ] ;
+  dc:license <http://creativecommons.org/licenses/by/4.0> ;
+  rdfs:isDefinedBy <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899>, <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3> ;
+  dcat:contactPoint [
+    ns2:fn "Centraal Bureau voor de Statistiek"@nl ;
+    a ns2:Kind ;
+    ns2:email <mailto:infoservice@cbs.nl>
+  ] ;
+  a ns1:Dataset ;
+  ns1:status <http://data.overheid.nl/status/beschikbaar> ;
+  dc:modified "2020-03-24T02:00:00"^^xsd:datetime ;
+  ns1:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+  ns1:authority <http://standaarden.overheid.nl/owms/terms/Centraal_Bureau_voor_de_Statistiek> ;
+  ns1:identifier <https://opendata.cbs.nl/ODataApi/OData/37556> ;
+  dc:title "Bevolking, huishoudens en bevolkingsontwikkeling; vanaf 1899"@nl ;
+  ns1:metadataLanguage <http://publications.europa.eu/resource/authority/language/NLD> ;
+  dc:description """Deze tabel bevat de belangrijkste kerncijfers over de bevolking, huishoudens en bevolkingsontwikkeling in Nederland.
+
+In de tabel worden de volgende gegevens onderscheiden:
+- Bevolking; 
+- Particuliere huishoudens;
+- Levend geboren kinderen;
+- Sterfte;
+- Verhuisde personen;
+- Huwelijkssluiting;
+- Huwelijksontbinding;
+- Wijziging van nationaliteit.
+
+Gegevens beschikbaar vanaf: 1899
+
+Status van de cijfers:
+Alle cijfers in de tabel zijn definitief.
+
+Wijzigingen per 24 maart 2020:
+De tabel is herzien. 
+De volgende wijzigingen zijn doorgevoerd:
+
+Bevolking op 1 januari: 
+- Het aantal 'Vrouwen' in 2012 is gecorrigeerd. 
+- De cijfers van 'Migratieachtergrond Suriname' en 'Migratieachtergrond (voormalige) Nederlandse Antillen' zijn voor 1971 tot en met 1994 gewijzigd. De wijziging is het gevolg van een methodewijziging in het verleden, die destijds niet is doorgevoerd in de tabel. De cijfers komen nu overeen met elders op StatLine.
+
+Bevolkingsontwikkeling: 
+'Emigratie' is gewijzigd in 'Emigratie inclusief administratieve correcties', 'Migratiesaldo' is gewijzigd in 'Migratiesaldo inclusief administratieve correcties'. Cijfers over emigratie inclusief het saldo van de administratieve correcties geven een beter beeld van de werkelijke emigratie dan cijfers over emigratie exclusief deze correcties. Door de wijziging zijn de cijfers over de perioden 1977 tot en met 2016 veranderd. 
+
+Levend geboren kinderen:
+De cijfers over 2015 van Levend geboren kinderen uit moeders van 25 tot 30 jaar relatief en Levend geboren kinderen uit moeders van 30 jaar of ouder relatief zijn gecorrigeerd. 
+
+Sterfte:
+- De cijfers van de 'Levensverwachting bij geboorte: mannen' en 'Levensverwachting bij geboorte: vrouwen' over 1950 tot en met 1962, 1972, 1982, 1991, 1999, 2009 en 2011 zijn gecorrigeerd. 
+- De cijfers van 'Sterfte < 1 jaar na de geboorte, relatief' over 1994 en 2011 zijn gecorrigeerd. 
+- Het cijfer van 'Sterfte < 1 jaar na de geboorte, relatief' over 2011 is gecorrigeerd. 
+- Overleden naar doodoorzaak zijn verwijderd uit de tabel.
+
+Buitenlandse migratie naar nationaliteit:
+- Diverse onderwerpen met betrekking tot 'Emigratie inclusief administratieve correcties' zijn toegevoegd.
+- 'Totaal immigratie' is over 1993 en 1996 gecorrigeerd. 
+- 'Immigratie, Europese Unie (exclusief Nederland)' is over 2004 en 2013 aangepast. 
+- 'Emigratie exclusief administratieve correcties, Nederlands' is over 1995 en 2012 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Totaal niet-Nederlands' is over 1995 en 2012 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Europese Unie' is over 2004, 2005 en 2013 aangepast. 
+
+Buitenlandse migratie naar geboorteland:
+- Diverse onderwerpen met betrekking tot 'Emigratie inclusief administratieve correcties' zijn toegevoegd.
+- 'Totaal immigratie' is over 1993 en 1996 gecorrigeerd. 
+- 'Immigratie, Europese Unie (exclusief Nederland)' is over 1987 tot en met 1990 en 2004 aangepast.
+- 'Immigratie, Suriname en de Nederlandse Antillen' is over 2012 gecorrigeerd. 
+- 'Immigratie, Nederlandse Antillen' is over 2012 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Europese Unie (exclusief Nederland)' is over 1989, 1999 en 2004 aangepast. 
+- 'Emigratie exclusief administratieve correcties, Indonesië' is over 1994 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Suriname en Nederlandse Antillen' is over 1997 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Nederlandse Antillen' is over 1997 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Specifieke emigratiegebieden' is over 1995 gecorrigeerd. 
+
+Buitenlandse migratie naar land van herkomst/bestemming:
+- 'Totaal immigratie' is over 1996 gecorrigeerd. 
+- 'Immigratie, Europese Unie (exclusief Nederland)' is over 2004 aangepast. 
+- 'Immigratie, Indonesië, Suriname en de Nederlandse Antillen' is over 2007 en 2010 tot en met 2016 gecorrigeerd. 
+- 'Immigratie, Suriname en de Nederlandse Antillen' is over 2010 tot en met 2016 gecorrigeerd. 
+- 'Immigratie, Indonesië' is over 2013 gecorrigeerd. 
+- 'Immigratie, Nederlandse Antillen' is over 2010 tot en met 2016 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Europese Unie (exclusief Nederland)' is over 1998 en 2004 aangepast. 
+- 'Emigratie exclusief administratieve correcties, Indonesië, Suriname en de Nederlandse Antillen' is over 2010 tot en met 2016 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Suriname en Nederlandse Antillen' is over 2010 tot en met 2016 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Nederlandse Antillen' is over 2010 tot en met 2016 gecorrigeerd. 
+- 'Emigratie exclusief administratieve correcties, Turkije' is over 2012 gecorrigeerd. 
+ 
+De correcties zijn het gevolg van handmatige acties. De verschillen zijn afrondverschillen en zijn minimaal.
+De aanpassingen met betrekking tot de Europese Unie zijn over het algemeen het gevolg van een veranderde berekeningswijze.
+
+Wanneer komen er nieuwe cijfers uit?
+De cijfers over de bevolkingsontwikkeling van 2019 en de bevolking per 1 januari 2020 worden in het vierde kwartaal van 2020 gepubliceerd."""@nl .
+
+<https://opendata.cbs.nl/ODataCatalog/>
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> ;
+  a dcat:Catalog .
+
+<http://publications.europa.eu/resource/authority/language/NLD>
+  a ns1:Language ;
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> .
+
+<http://standaarden.overheid.nl/owms/terms/Sociale_zekerheid>
+  a <http://standaarden.overheid.nl/owms/terms/Thema> ;
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> .
+
+<http://standaarden.overheid.nl/owms/terms/Centraal_Bureau_voor_de_Statistiek>
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> ;
+  a ns1:Organization .
+
+<http://publications.europa.eu/resource/authority/access-right/PUBLIC>
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> ;
+  a ns1:OpenbaarheidsNiveau .
+
+<https://www.iana.org/assignments/media-types/application/json>
+  a ns1:Mediatype ;
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> .
+
+<https://www.iana.org/assignments/media-types/application/atom+xml>
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> ;
+  a ns1:Mediatype .
+
+<http://publications.europa.eu/resource/authority/frequency/ANNUAL>
+  a ns1:Frequency ;
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> .
+
+<http://data.overheid.nl/status/beschikbaar>
+  a ns1:DatasetStatus ;
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> .
+
+<http://publications.europa.eu/resource/authority/file-type/ATOM>
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> ;
+  a ns1:Format .
+
+<http://creativecommons.org/licenses/by/4.0>
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> ;
+  a ns1:License .
+
+<https://data.overheid.nl/distributiontype/webservice>
+  rdfs:isDefinedBy <https://data.overheid.nl/vocabularies.rdf> ;
+  a ns1:DistributionType .
