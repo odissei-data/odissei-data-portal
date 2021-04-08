@@ -1,5 +1,16 @@
-@prefix dans: <https://dans.knaw.nl/dansOntology/>.
-<http://doi.org/,10.17026/dans-z34-fjds> a disco:LogicalDataSet;
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#>.
+@prefix doi: <http://doi.org/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix disco: <http://rdf-vocabulary.ddialliance.org/discovery#>.
+@prefix opl: <http://www.w3id.org/odissei/ns/terms_of_use_representation/>.
+@prefix odrl: <http://www.w3.org/ns/odrl/2/>.
+@prefix idlab-fn: <http://example.com/idlab/function/>.
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>.
+
+<http://doi.org/10.17026/dans-z34-fjds> a disco:LogicalDataSet;
     dct:creator "Stichting Mondelinge Geschiedenis Indonesië (SMGI)"^^xsd:string, "Koninklijk Instituut voor Taal-, Land- en Volkenkunde (KITLV)"^^xsd:string;
     dct:title "Interviewcollectie Stichting Mondelinge Geschiedenis Indonesië, interview 1007"^^xsd:string;
     dct:publisher "Data Archiving and Networked Services (DANS)"^^xsd:string;
@@ -10,9 +21,9 @@
     dct:available "2011-08-24"^^xsd:date;
     dct:language "nl"^^xsd:language;
     dct:type "Dataset"^^xsd:string;
-    dans:easyAltId "urn:nbn:nl:ui:13-pkmq-tv"^^xsd:string, "easy-dataset:46951"^^xsd:string;
+    skos:altLabel "urn:nbn:nl:ui:13-pkmq-tv"^^xsd:string, "easy-dataset:46951"^^xsd:string;
     dct:format "RTF"^^xsd:string;
-    opl:hasAccess opl:Restricted;
+    opl:hasAccess <http://publications.europa.eu/ontology/euvoc#AccessRightRESTRICTED>;
     odrl:hasPolicy <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>;
     dct:description "De geïnterviewde kwam na de capitulatie van Japan in kampen terecht. Hierna kwam hij bij het KNIL en diende tot aan de opheffing. De bersiap tijd was verwarrend. Hij vertelt over de omstandigheden in de kampen. De zogenaamde beschermingskampen voelde als gevangenschap. De geïnterviewde wilde Nederlands-Indië behouden. De geïnterviewde vertelt over de soevereiniteitsoverdracht. Hij vertelt over de leefwijze van zijn familie en gaat in op zijn gevoelens bij het onafhankelijk worden van Indonesië. In 1954 ging hij naar Nederland."^^xsd:string;
-    dct:spatial <http://publications.europa.eu/resource/authority/country/IDN>.
+    dct:spatial "Indonesië"^^xsd:string.
