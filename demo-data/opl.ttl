@@ -311,28 +311,12 @@ opl:PrivateUse
         odrl:includedIn         odrl:use ;
         skos:scopeNote          "Non-Normative"@en .   
 
-opl:Accessible
-        a                       odrl:AccessibilityTerms, skos:Concept ;
-        rdfs:isDefinedBy        opl: ;
-        skos:inScheme           opl: ;
-        rdfs:label              "Accessibile"@en ;
-        skos:definition         "Defines that the Asset is Accessible."@en ;
-        skos:note               "This term is defined by OPL."@en .  
-
 opl:AccessibleWithRegistration
         a                       odrl:AccessibilityTerms, skos:Concept ;
         rdfs:isDefinedBy        opl: ;
         skos:inScheme           opl: ;
         rdfs:label              "Accessibile with Registration"@en ;
         skos:definition         "Defines that the Asset is Accessible with Registration."@en ;
-        skos:note               "This term is defined by OPL."@en .  
-
-opl:Restricted
-        a                       odrl:AccessibilityTerms, skos:Concept ;
-        rdfs:isDefinedBy        opl: ;
-        skos:inScheme           opl: ;
-        rdfs:label              "Restricted"@en ;
-        skos:definition         "Defines that the Asset is Restricted."@en ;
         skos:note               "This term is defined by OPL."@en .  
 
 opl:OtherAccess
@@ -713,13 +697,15 @@ opl:NotAvailable
 <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>     
         a                       odrl:Policy ;
         odrl:uid                "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf" ;
-        odrl:source             "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf" ;
+        odrl:source             "https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf"@en,
+                                "https://dans.knaw.nl/nl/over/organisatie-beleid/juridische-informatie/DANSLicentie.pdf"@nl ;
         odrl:permission         cc:Reproduction,
                                 cc:DerivativeWorks,
                                 opl:AcademicUse ;
         odrl:prohibition        cc:Distribution,
                                 cc:CommercialUse ;
-        odrl:obligation         opl:dansAttribution .
+        odrl:obligation         opl:dansAttribution ;
+        skos:altLabel           <https://dans.knaw.nl/nl/over/organisatie-beleid/juridische-informatie/DANSLicentie.pdf> .
 
 opl:cessda0                     
         a                       odrl:Policy ;
@@ -775,44 +761,44 @@ opl:cessda4
                 odrl:constraint         [
                         odrl:leftOperand        odrl:spatial ;
                         odrl:operator           odrl:eq ;
-                        odrl:rightOperand       "http://publications.europa.eu/resource/authority/country/AUT",
-                                                "http://publications.europa.eu/resource/authority/country/BEL",
-                                                "http://publications.europa.eu/resource/authority/country/BGR",
-                                                "http://publications.europa.eu/resource/authority/country/HRV",
-                                                "http://publications.europa.eu/resource/authority/country/CYP",
-                                                "http://publications.europa.eu/resource/authority/country/CZE",
-                                                "http://publications.europa.eu/resource/authority/country/DNK",
-                                                "http://publications.europa.eu/resource/authority/country/EST",
-                                                "http://publications.europa.eu/resource/authority/country/FIN",
-                                                "http://publications.europa.eu/resource/authority/country/FRA",
-                                                "http://publications.europa.eu/resource/authority/country/DEU",
-                                                "http://publications.europa.eu/resource/authority/country/GRC",
-                                                "http://publications.europa.eu/resource/authority/country/HUN",
-                                                "http://publications.europa.eu/resource/authority/country/IRL",
-                                                "http://publications.europa.eu/resource/authority/country/ITA",
-                                                "http://publications.europa.eu/resource/authority/country/LVA",
-                                                "http://publications.europa.eu/resource/authority/country/LTU",
-                                                "http://publications.europa.eu/resource/authority/country/LUX",
-                                                "http://publications.europa.eu/resource/authority/country/MLT",
-                                                "http://publications.europa.eu/resource/authority/country/NLD",
-                                                "http://publications.europa.eu/resource/authority/country/POL",
-                                                "http://publications.europa.eu/resource/authority/country/PRT",
-                                                "http://publications.europa.eu/resource/authority/country/ROU",
-                                                "http://publications.europa.eu/resource/authority/country/SVK",
-                                                "http://publications.europa.eu/resource/authority/country/SVN",
-                                                "http://publications.europa.eu/resource/authority/country/ESP",
-                                                "http://publications.europa.eu/resource/authority/country/SWE",
-                                                "http://publications.europa.eu/resource/authority/country/AND",
-                                                "http://publications.europa.eu/resource/authority/country/ARG",
-                                                "http://publications.europa.eu/resource/authority/country/FRO",
-                                                "http://publications.europa.eu/resource/authority/country/GGY",
-                                                "http://publications.europa.eu/resource/authority/country/IMN",
-                                                "http://publications.europa.eu/resource/authority/country/ISR",
-                                                "http://publications.europa.eu/resource/authority/country/JPN",
-                                                "http://publications.europa.eu/resource/authority/country/JEY",
-                                                "http://publications.europa.eu/resource/authority/country/NZL",
-                                                "http://publications.europa.eu/resource/authority/country/CHE",
-                                                "http://publications.europa.eu/resource/authority/country/URY" 
+                        odrl:rightOperand       <http://publications.europa.eu/resource/authority/country/AUT>,
+                                                <http://publications.europa.eu/resource/authority/country/BEL>,
+                                                <http://publications.europa.eu/resource/authority/country/BGR>,
+                                                <http://publications.europa.eu/resource/authority/country/HRV>,
+                                                <http://publications.europa.eu/resource/authority/country/CYP>,
+                                                <http://publications.europa.eu/resource/authority/country/CZE>,
+                                                <http://publications.europa.eu/resource/authority/country/DNK>,
+                                                <http://publications.europa.eu/resource/authority/country/EST>,
+                                                <http://publications.europa.eu/resource/authority/country/FIN>,
+                                                <http://publications.europa.eu/resource/authority/country/FRA>,
+                                                <http://publications.europa.eu/resource/authority/country/DEU>,
+                                                <http://publications.europa.eu/resource/authority/country/GRC>,
+                                                <http://publications.europa.eu/resource/authority/country/HUN>,
+                                                <http://publications.europa.eu/resource/authority/country/IRL>,
+                                                <http://publications.europa.eu/resource/authority/country/ITA>,
+                                                <http://publications.europa.eu/resource/authority/country/LVA>,
+                                                <http://publications.europa.eu/resource/authority/country/LTU>,
+                                                <http://publications.europa.eu/resource/authority/country/LUX>,
+                                                <http://publications.europa.eu/resource/authority/country/MLT>,
+                                                <http://publications.europa.eu/resource/authority/country/NLD>,
+                                                <http://publications.europa.eu/resource/authority/country/POL>,
+                                                <http://publications.europa.eu/resource/authority/country/PRT>,
+                                                <http://publications.europa.eu/resource/authority/country/ROU>,
+                                                <http://publications.europa.eu/resource/authority/country/SVK>,
+                                                <http://publications.europa.eu/resource/authority/country/SVN>,
+                                                <http://publications.europa.eu/resource/authority/country/ESP>,
+                                                <http://publications.europa.eu/resource/authority/country/SWE>,
+                                                <http://publications.europa.eu/resource/authority/country/AND>,
+                                                <http://publications.europa.eu/resource/authority/country/ARG>,
+                                                <http://publications.europa.eu/resource/authority/country/FRO>,
+                                                <http://publications.europa.eu/resource/authority/country/GGY>,
+                                                <http://publications.europa.eu/resource/authority/country/IMN>,
+                                                <http://publications.europa.eu/resource/authority/country/ISR>,
+                                                <http://publications.europa.eu/resource/authority/country/JPN>,
+                                                <http://publications.europa.eu/resource/authority/country/JEY>,
+                                                <http://publications.europa.eu/resource/authority/country/NZL>,
+                                                <http://publications.europa.eu/resource/authority/country/CHE>,
+                                                <http://publications.europa.eu/resource/authority/country/URY> 
                 ]  
         ] .
 
