@@ -1,5 +1,5 @@
 prefixes:
-  dans: https://example.org/dansOntology/
+  skos: http://www.w3.org/2004/02/skos/core#
   doi: http://doi.org/
   dct: http://purl.org/dc/terms/
   disco: http://rdf-vocabulary.ddialliance.org/discovery#
@@ -7,6 +7,7 @@ prefixes:
   odrl: http://www.w3.org/ns/odrl/2/
   idlab-fn: http://example.com/idlab/function/
   grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
+  euvoc: http://publications.europa.eu/ontology/euvoc#AccessRight
 
 mappings:
   test:
@@ -15,7 +16,8 @@ mappings:
     s: 
         function: grel:array_join
         parameters:
-            - [grel:p_array_a, [doi:, $(identifier)]]
+            - [grel:p_array_a, doi:]
+            - [grel:p_array_a, $(identifier)]
     po:
       - [a, disco:LogicalDataSet]
       - [dct:creator, $(creators/creator/creatorName),xsd:string]
@@ -28,7 +30,7 @@ mappings:
       - [dct:available, "$(dates/date[@dateType='Available'])", xsd:date]
       - [dct:language, $(language), xsd:language]
       - [dct:type, $(resourceType), xsd:string]
-      - [dans:easyAltId, $(alternateIdentifiers/alternateIdentifier), xsd:string]
+      - [skos:altLabel, $(alternateIdentifiers/alternateIdentifier), xsd:string]
       - [dct:format, $(formats/format), xsd:string]
       - predicates: opl:hasAccess
         objects: 
@@ -36,13 +38,13 @@ mappings:
               parameters:
                 - [idlab-fn:str, "$(rightsList/rights[1])"]
                 - [idlab-fn:expectedStr, "info:eu-repo/semantics/restrictedAccess"]
-                - [idlab-fn:result, opl:Restricted] 
+                - [idlab-fn:result, euvoc:RESTRICTED] 
               type: iri
             - function: idlab-fn:decide
               parameters:
                 - [idlab-fn:str, "$(rightsList/rights[1])"]
                 - [idlab-fn:expectedStr, "info:eu-repo/semantics/openAccess"]
-                - [idlab-fn:result, opl:Accessible] 
+                - [idlab-fn:result, euvoc:PUBLIC] 
               type: iri
       - predicates: odrl:hasPolicy
         objects:
