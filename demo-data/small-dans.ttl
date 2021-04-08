@@ -9,6 +9,7 @@
 @prefix odrl: <http://www.w3.org/ns/odrl/2/>.
 @prefix idlab-fn: <http://example.com/idlab/function/>.
 @prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>.
+@prefix euvoc: <http://publications.europa.eu/resource/authority/access-right/>.
 
 <http://doi.org/10.17026/dans-z34-fjds> a disco:LogicalDataSet;
     dct:creator "Stichting Mondelinge Geschiedenis Indonesië (SMGI)"^^xsd:string, "Koninklijk Instituut voor Taal-, Land- en Volkenkunde (KITLV)"^^xsd:string;
@@ -23,7 +24,7 @@
     dct:type "Dataset"^^xsd:string;
     skos:altLabel "urn:nbn:nl:ui:13-pkmq-tv"^^xsd:string, "easy-dataset:46951"^^xsd:string;
     dct:format "RTF"^^xsd:string;
-    opl:hasAccess <http://publications.europa.eu/ontology/euvoc#AccessRightRESTRICTED>;
+    opl:hasAccess euvoc:RESTRICTED;
     odrl:hasPolicy <https://dans.knaw.nl/en/about/organisation-and-policy/legal-information/DANSLicence.pdf>;
     dct:description "De geïnterviewde kwam na de capitulatie van Japan in kampen terecht. Hierna kwam hij bij het KNIL en diende tot aan de opheffing. De bersiap tijd was verwarrend. Hij vertelt over de omstandigheden in de kampen. De zogenaamde beschermingskampen voelde als gevangenschap. De geïnterviewde wilde Nederlands-Indië behouden. De geïnterviewde vertelt over de soevereiniteitsoverdracht. Hij vertelt over de leefwijze van zijn familie en gaat in op zijn gevoelens bij het onafhankelijk worden van Indonesië. In 1954 ging hij naar Nederland."^^xsd:string;
     dct:spatial "Indonesië"^^xsd:string.
