@@ -27,16 +27,6 @@ opl:AccessibilityTerms
         skos:definition         "A non-empty group of Accessibility Term."@en ;
         skos:note               "A Policy must contain an Accessibility Term."@en .
 
-opl:hasAccess
-        a                       rdf:Property , owl:ObjectProperty, skos:Concept ;
-        rdfs:isDefinedBy        opl: ;
-        skos:inScheme           opl: ;
-        rdfs:label              "Target Access"@en ;
-        skos:definition         "Identifies an OPL Accessibility Term Policy for which the identified Asset is the target Asset."@en ;
-        skos:note               "The Asset being identified MUST be inferred to be the target Asset of the Accesibility Term."@en ;
-        rdfs:domain             odrl:Asset ;
-        rdfs:range              opl:AccessibilityTerms .
-
 opl:requestAccess       
         a                       rdf:Property, owl:ObjectProperty, skos:Concept ;
         rdfs:isDefinedBy        opl: ;

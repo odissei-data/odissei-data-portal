@@ -7,7 +7,7 @@ prefixes:
   odrl: http://www.w3.org/ns/odrl/2/
   idlab-fn: http://example.com/idlab/function/
   grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
-  euvoc: http://publications.europa.eu/resource/authority/access-right/
+  at: http://publications.europa.eu/resource/authority/
 
 mappings:
   test:
@@ -32,19 +32,19 @@ mappings:
       - [dct:type, $(resourceType), xsd:string]
       - [skos:altLabel, $(alternateIdentifiers/alternateIdentifier), xsd:string]
       - [dct:format, $(formats/format), xsd:string]
-      - predicates: opl:hasAccess
+      - predicates: dct:accessRights
         objects: 
             - function: idlab-fn:decide
               parameters:
                 - [idlab-fn:str, "$(rightsList/rights[1])"]
                 - [idlab-fn:expectedStr, "info:eu-repo/semantics/restrictedAccess"]
-                - [idlab-fn:result, euvoc:RESTRICTED] 
+                - [idlab-fn:result, at:RESTRICTED] 
               type: iri
             - function: idlab-fn:decide
               parameters:
                 - [idlab-fn:str, "$(rightsList/rights[1])"]
                 - [idlab-fn:expectedStr, "info:eu-repo/semantics/openAccess"]
-                - [idlab-fn:result, euvoc:PUBLIC] 
+                - [idlab-fn:result, at:PUBLIC] 
               type: iri
       - predicates: odrl:hasPolicy
         objects:
