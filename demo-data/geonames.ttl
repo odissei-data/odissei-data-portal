@@ -1,3 +1,11 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns0: <http://www.geonames.org/ontology#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix ns1: <https://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+
 <https://sws.geonames.org/1643084/>
   a <http://www.geonames.org/ontology#Feature> ;
   rdfs:isDefinedBy <https://sws.geonames.org/1643084/about.rdf> ;
@@ -21,7 +29,7 @@
 <https://sws.geonames.org/1643084/about.rdf>
   a foaf:Document ;
   foaf:primaryTopic <https://sws.geonames.org/1643084/> ;
-  cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  cc:license <https://creativecommons.org/licenses/by/4.0> ;
   cc:attributionURL <https://www.geonames.org> ;
   cc:attributionName "GeoNames"^^ns1:string ;
   dc:created "2006-01-15"^^ns1:date ;
