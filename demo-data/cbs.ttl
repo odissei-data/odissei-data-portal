@@ -1,4 +1,4 @@
-@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -8,14 +8,14 @@
 @prefix ns2: <http://www.w3.org/2006/vcard/> .
 
 <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3>
-  dc:issued "2020-04-02T15:36:08.994427"^^xsd:datetime ;
+  dct:issued "2020-04-02T15:36:08.994427"^^xsd:datetime ;
   rdfs:isDefinedBy <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899.rdf>, <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3.rdf> ;
-  dc:title "415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899"@nl ;
-  dc:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+  dct:title "415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899"@nl ;
+  dct:language <http://publications.europa.eu/resource/authority/language/NLD> ;
   dct:spatial <http://publications.europa.eu/resource/authority/country/IDN>;
   dct:spatial <http://publications.europa.eu/resource/authority/country/NLD>;
   dct:spatial <http://publications.europa.eu/resource/authority/country/SUR>;
-  dc:description """Deze tabel bevat de belangrijkste kerncijfers over de bevolking, huishoudens en bevolkingsontwikkeling in Nederland.
+  dct:description """Deze tabel bevat de belangrijkste kerncijfers over de bevolking, huishoudens en bevolkingsontwikkeling in Nederland.
 
 In de tabel worden de volgende gegevens onderscheiden:
 - Bevolking; 
@@ -90,7 +90,7 @@ De aanpassingen met betrekking tot de Europese Unie zijn over het algemeen het g
 
 Wanneer komen er nieuwe cijfers uit?
 De cijfers over de bevolkingsontwikkeling van 2019 en de bevolking per 1 januari 2020 worden in het vierde kwartaal van 2020 gepubliceerd."""@nl ;
-  dc:modified "2021-03-29T01:57:44.465193"^^xsd:datetime ;
+  dct:modified "2021-03-29T01:57:44.465193"^^xsd:datetime ;
   foaf:primaryTopic <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899> ;
   a dcat:CatalogRecord ;
   ns0:status ":updated"@nl .
@@ -105,38 +105,38 @@ De cijfers over de bevolkingsontwikkeling van 2019 en de bevolking per 1 januari
   ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
   ns1:publisher <http://standaarden.overheid.nl/owms/terms/Centraal_Bureau_voor_de_Statistiek> ;
   ns1:sourceCatalog <https://opendata.cbs.nl/ODataCatalog/> ;
-  dc:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+  dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
   ns0:identifier <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899>, <https://data.overheid.nl/data/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3>, <https://data.overheid.nl/data/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899>, <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3> ;
   dcat:distribution [
-    dc:title "Feed"@nl ;
+    dct:title "Feed"@nl ;
     ns1:distributionType <https://data.overheid.nl/distributiontype/webservice> ;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/atom+xml> ;
     rdfs:isDefinedBy <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3.rdf>, <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899.rdf> ;
     dcat:downloadURL <https://opendata.cbs.nl/ODataFeed/OData/37556> ;
     dcat:accessURL <https://opendata.cbs.nl/statline/#/CBS/nl/dataset/37556/table> ;
-    dc:license <http://creativecommons.org/licenses/by/4.0> ;
-    dc:description """Bevolking, huishoudens, geboorte, sterfte, verhuisde personen, 
+    dct:license <http://creativecommons.org/licenses/by/4.0> ;
+    dct:description """Bevolking, huishoudens, geboorte, sterfte, verhuisde personen, 
 huwelijkssluiting en huwelijksontbinding in Nederland"""@nl ;
-    dc:language <http://publications.europa.eu/resource/authority/language/NLD> ;
-    dc:issued "2020-09-07T18:10:10.339167"^^xsd:datetime ;
-    dc:format <http://publications.europa.eu/resource/authority/file-type/ATOM> ;
+    dct:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    dct:issued "2020-09-07T18:10:10.339167"^^xsd:datetime ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/ATOM> ;
     a ns1:Distribution
   ], [
     dcat:downloadURL <https://opendata.cbs.nl/ODataApi/OData/37556> ;
-    dc:title "API"@nl ;
-    dc:description """Bevolking, huishoudens, geboorte, sterfte, verhuisde personen, 
+    dct:title "API"@nl ;
+    dct:description """Bevolking, huishoudens, geboorte, sterfte, verhuisde personen, 
 huwelijkssluiting en huwelijksontbinding in Nederland"""@nl ;
     ns1:distributionType <https://data.overheid.nl/distributiontype/webservice> ;
-    dc:license <http://creativecommons.org/licenses/by/4.0> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0> ;
     rdfs:isDefinedBy <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3.rdf>, <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899.rdf> ;
-    dc:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
     dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> ;
-    dc:issued "2020-09-07T18:10:10.339158"^^xsd:datetime ;
-    dc:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    dct:issued "2020-09-07T18:10:10.339158"^^xsd:datetime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/NLD> ;
     dcat:accessURL <https://opendata.cbs.nl/statline/#/CBS/nl/dataset/37556/table> ;
     a ns1:Distribution
   ] ;
-  dc:license <http://creativecommons.org/licenses/by/4.0> ;
+  dct:license <http://creativecommons.org/licenses/by/4.0> ;
   rdfs:isDefinedBy <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899>, <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3> ;
   dcat:contactPoint [
     ns2:fn "Centraal Bureau voor de Statistiek"@nl ;
@@ -145,13 +145,13 @@ huwelijkssluiting en huwelijksontbinding in Nederland"""@nl ;
   ] ;
   a ns1:Dataset ;
   ns1:status <http://data.overheid.nl/status/beschikbaar> ;
-  dc:modified "2020-03-24T02:00:00"^^xsd:datetime ;
+  dct:modified "2020-03-24T02:00:00"^^xsd:datetime ;
   ns1:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
   ns1:authority <http://standaarden.overheid.nl/owms/terms/Centraal_Bureau_voor_de_Statistiek> ;
   ns1:identifier <https://opendata.cbs.nl/ODataApi/OData/37556> ;
-  dc:title "Bevolking, huishoudens en bevolkingsontwikkeling; vanaf 1899"@nl ;
+  dct:title "Bevolking, huishoudens en bevolkingsontwikkeling; vanaf 1899"@nl ;
   ns1:metadataLanguage <http://publications.europa.eu/resource/authority/language/NLD> ;
-  dc:description """Deze tabel bevat de belangrijkste kerncijfers over de bevolking, huishoudens en bevolkingsontwikkeling in Nederland.
+  dct:description """Deze tabel bevat de belangrijkste kerncijfers over de bevolking, huishoudens en bevolkingsontwikkeling in Nederland.
 
 In de tabel worden de volgende gegevens onderscheiden:
 - Bevolking; 
