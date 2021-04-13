@@ -4,7 +4,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix ns1: <https://www.w3.org/2001/XMLSchema#> .
-@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://sws.geonames.org/1643084/>
   a <http://www.geonames.org/ontology#Feature> ;
@@ -32,5 +32,5 @@
   cc:license <https://creativecommons.org/licenses/by/4.0> ;
   cc:attributionURL <https://www.geonames.org> ;
   cc:attributionName "GeoNames"^^ns1:string ;
-  dc:created "2006-01-15"^^ns1:date ;
-  dc:modified "2020-03-29"^^ns1:date .
+  dct:created "2006-01-15"^^ns1:date ;
+  dct:modified "2020-03-29"^^ns1:date .
