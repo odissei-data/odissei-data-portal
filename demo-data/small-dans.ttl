@@ -9,7 +9,7 @@
 @prefix odrl: <http://www.w3.org/ns/odrl/2/>.
 @prefix idlab-fn: <http://example.com/idlab/function/>.
 @prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#>.
-@prefix at: <http://publications.europa.eu/resource/authority/>.
+@prefix at: <http://publications.europa.eu/resource/authority/access-right/>.
 
 <http://doi.org/10.17026/dans-z34-fjds> a disco:LogicalDataSet;
     dct:creator "Stichting Mondelinge Geschiedenis Indonesië (SMGI)"^^xsd:string, "Koninklijk Instituut voor Taal-, Land- en Volkenkunde (KITLV)"^^xsd:string;

@@ -7,7 +7,7 @@ prefixes:
   odrl: http://www.w3.org/ns/odrl/2/
   idlab-fn: http://example.com/idlab/function/
   grel: http://users.ugent.be/~bjdmeest/function/grel.ttl#
-  at: http://publications.europa.eu/resource/authority/
+  at: http://publications.europa.eu/resource/authority/access-right/
 
 mappings:
   test:
