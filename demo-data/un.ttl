@@ -16,7 +16,3 @@
     dct:description "Excel files with estimates and standard projection variants (see Definition of projection variants for further details). For probabilistic results, select Probabilistic Projections above. For advanced users who need to use these data in a database form or statistical software, we recommend to use the CSV format for bulk download.             "^^xsd:string;
     dct:spatial <http://publications.europa.eu/resource/authority/country/IDN>.
 
-
-
-
-

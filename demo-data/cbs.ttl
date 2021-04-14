@@ -107,6 +107,9 @@ De cijfers over de bevolkingsontwikkeling van 2019 en de bevolking per 1 januari
   ns1:sourceCatalog <https://opendata.cbs.nl/ODataCatalog/> ;
   dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
   ns0:identifier <https://data.overheid.nl/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899>, <https://data.overheid.nl/data/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3>, <https://data.overheid.nl/data/dataset/415-bevolking--huishoudens-en-bevolkingsontwikkeling--vanaf-1899>, <https://data.overheid.nl/dataset/7449f5fc-1abc-487c-926f-26b4004a24b3> ;
+  dct:spatial <http://publications.europa.eu/resource/authority/country/IDN>;
+  dct:spatial <http://publications.europa.eu/resource/authority/country/NLD>;
+  dct:spatial <http://publications.europa.eu/resource/authority/country/SUR>;
   dcat:distribution [
     dct:title "Feed"@nl ;
     ns1:distributionType <https://data.overheid.nl/distributiontype/webservice> ;
